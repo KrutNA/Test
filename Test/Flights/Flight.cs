@@ -4,13 +4,13 @@ namespace Test.Flights
 {
     public class Flight : IEquatable<Flight>, IComparable<Flight>
     {
-        public string FlightId { get; }
+        public string FlightId { get; private set; }
 
-        public DateTime ArrivalTime { get; }
-        public DateTime DepartureTime { get; }
+        public DateTime ArrivalTime { get; private set; }
+        public DateTime DepartureTime { get; private set; }
 
-        public string ArrivalPlace { get; }
-        public string DeparturePlace { get; }
+        public string ArrivalPlace { get; private set; }
+        public string DeparturePlace { get; private set; }
 
         public Flight(string id, DateTime arrTime, DateTime depTime, string arrPlace, string depPlace)
         {
